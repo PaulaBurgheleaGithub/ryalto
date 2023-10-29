@@ -1,0 +1,60 @@
+:root {
+	--blue-bg:#2799f0;
+	--white-br: #fdfdfd;
+	--nav-link:#ababab;
+	--logo-text: #1e212d;
+}
+
+* {
+	font-family: work sans,sans-serif;
+}
+
+h1 {
+	font-size: 2.2rem;
+   font-weight: 600;
+}
+
+p {
+	font-size: 1rem;
+   line-height: 1.5rem;
+	font-family: work sans,sans-serif;
+}
+
+h2 {
+	font-size: 1.7rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	box-shadow: 0 0 29px 2px rgba(82,105,122,.4);
+}
+
+.navbar ul, 
+.social-bar {
+	list-style: none;
+}
+.nav-link {
+	color: var(--nav-link);
+	text-decoration: none;
+}
+
+.logo-content h2 {
+	color: var(--logo-text);
+	font-weight: 100;
+}
+
+.content h1,
+.content p {
+	color: var(--white-br);
+}
+
+.icon {
+	background-color: var(--white-br);
+}
+
+.icon img:hover{
+	background-color: #2799f0;
+}
