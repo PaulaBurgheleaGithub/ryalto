@@ -3,6 +3,7 @@
 	--white-br: #fdfdfd;
 	--nav-link:#ababab;
 	--logo-text: #1e212d;
+	--shadow:rgba(82,105,122,.4);
 }
 
 * {
@@ -15,25 +16,38 @@ h1 {
 }
 
 p {
-	font-size: 1rem;
-   line-height: 1.5rem;
+	font-size: 1.1rem;
+   line-height: 1.6rem;
 	font-family: work sans,sans-serif;
 }
 
 h2 {
 	font-size: 1.7rem;
+	font-weight: 400;
 }
 
-a {
+h3 {
+	font-size: 1.4rem;
+   font-weight: 600;
+}
+
+h5 {
+	font-size: 0.63em;
+}
+
+a,
+.post-container a {
 	text-decoration: none;
 }
 
 nav {
-	box-shadow: 0 0 29px 2px rgba(82,105,122,.4);
+	background: var(--white-br);
+	box-shadow: 0 0 29px 2px var(--shadow);
 }
 
 .navbar ul, 
-.social-bar {
+.social-bar,
+.post-container {
 	list-style: none;
 }
 .nav-link {
@@ -46,6 +60,12 @@ nav {
 	font-weight: 100;
 }
 
+.chevron-header {
+	background-color: var(--blue-bg);
+	clip-path: polygon(0 0,100% 0%,100% 75%,50% 100%,0 75%);
+}
+	
+
 .content h1,
 .content p {
 	color: var(--white-br);
@@ -55,6 +75,65 @@ nav {
 	background-color: var(--white-br);
 }
 
-.icon img:hover{
-	background-color: #2799f0;
+/* TO DO change fill color for the SVG instead of background for image*/
+.icon img:hover {
+	background: #2799f0;
+}
+
+.blog-header {
+	color: var(--logo-text);
+	text-align: center;
+}
+
+.tabcontent h3,
+.card-content h3,
+.post-details h5,
+.post-lead {
+	color: var(--logo-text);
+}
+
+.tabcontent p {
+	color: var(--nav-link);
+	font-size: .8rem;
+}
+
+.card-content {
+	font-size: 1.5rem;
+}
+
+.card-content h3 {
+	padding: 0;
+}
+
+.post-details h5 {
+	margin: 0;
+   text-transform: capitalize;
+}
+
+p.sub {
+	line-height: 1rem;
+	font-size: .8rem;
+	text-transform: capitalize;
+	color: var(--nav-link);
+}
+
+.article-card {
+	box-shadow: 0 0 29px 2px var(--shadow);
+	opacity: 0.8;
+}
+.article-card:hover {
+	opacity: 1;
+	box-shadow: 0 0 29px 2px rgba(64, 106, 138, 0.4);
+}
+
+.avatar#phil {
+	background: linear-gradient(to bottom right,#f12711,#f5af19);
+}
+
+.avatar#koto {
+	background: linear-gradient(to bottom left, #c21858, #FF8EB9);
+}
+
+footer {
+	background: linear-gradient(to top, #eee 60%, #52697a 180%);
 }
