@@ -1,216 +1,64 @@
-:root {
-	--padding-val: 40px;
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-	box-sizing: inherit;
-}
-
-body,
-figure,
-ul,
-p.sub {
-	margin:0;
-	padding:0;
-	overflow-x: hidden;
-}
-
-img {
-	max-width:100%;
-	max-height: 100%;
-}
-
-button {
-	border: 0;
-}
-
-/* utilities classes */
-.wrapper {
-	padding: 0 var(--padding-val);
-}
-
-.flex {
-	display: flex;
-	gap: var(--gap, 1rem); 
-}
-
-nav {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 10;
-}
-
-.navbar {
-	justify-content: space-between;
-	width: 100%;
-}
-
-.logo-content {
-	width: 100%;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	--gap: 3px;
-}
-
-.logo {
-	height: 40px;
-	margin: 0 0 5px;
-}
-
-
-.navbar ul {
-	display: inline-flex;
-	justify-content: right;
-	align-items: center;
-	--gap:30px;
-}
-
-
-
-/* I am using this span for screen readers only*/
-.toggle-icon > p {
+.logo-content figcaption {
 	display: none;
 }
 
+.logo {
+	height: clamp(27px,3vw,45px);
+	margin: 0 0 5px;
+}
+
 .toggle-icon {
-	background-image: url(/assets/svg/day-mode-blue.svg);
-	background-size: cover;
-	cursor: pointer;
+	display: none;
+}
+.menu {
+	padding: min(30vh, 10rem) 2em;
+	position: fixed;
+	z-index: 20;
+	inset: 0 0 0 50%;
+
+	flex-direction: column;
+	--gap: 2.5em;
+
+	background: var(--nav-link);
+	transform: translateX(100%);
+	transition: transform 375ms ease-out;
+}
+
+.menu a {
+	color: var(--white-br);
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.mobile-nav-toggle {
 	display: block;
-	height: 24px;
-	margin: auto 0 auto 40px;
-	width: 24px;
+	position: absolute;
+	z-index: 99;
+	background-color: transparent;
+	background: url(../assets/svg/icon-hamburger.svg);
+	background-repeat: no-repeat;
+	width: 2rem;
+	aspect-ratio: 1;
+	top: 1rem;
+	right: 1.5rem;
+}
+
+.mobile-nav-toggle[aria-expanded = "true"] {
+	background-color: transparent;
+	background: url(../assets/svg/icon-close.svg);
+	background-repeat: no-repeat;
 }
 
 .chevron-header {
-	
-   padding: 80px;
-   margin: auto 0 80px;
-   max-width: 100vw;
-   text-align: center;
-   width: 100%;
-}
-
-.content {
-	width: 60%;
-	margin: 40px auto;
-}
-
-.social-bar {
-	--gap: 16px;
-	justify-content: space-between;
-	margin: 20px auto;
-	width: fit-content;
-}
-
-.icon {
-	height: 40px;
-	aspect-ratio: 1;
-	border-radius: 50px;
+	padding: 80px 0;
 }
 
 
-.icon img {
-	height: 20px;
-	aspect-ratio: 1;
-	margin: auto;
-}
 
-.icon img:hover {
-	border-radius: 10px;
-}
-
-.blog {
-	margin: 0 auto;
-	max-width: 1024px;
-	width: 88vw;
+.page-title {
+	display:none;
 }
 
 .tabcontent {
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0;
-	width: 100%;
-	padding: 0 2rem;
-}
-
-.post-container {
-	border-radius: 1rem;
-	display: grid;
-	grid-auto-flow: dense;
-	gap: 1rem;
-	grid-template-columns:repeat(auto-fit, minmax(min(100%, 330px), 1fr));
-	/* grid-template-rows: auto; */
-	/* container-type: inline-size; */
-	/* height: auto; */
-	padding: 2rem 2rem;
-}
-
-.article-card {
-	border-radius: 8px;
 	flex-direction: column;
-	flex-grow: 1;
-	/* height: 220px; */
-	justify-content: center;
-	width: 100%;
-}
-
-.card-content {
-	flex-direction: column;
-	flex-wrap: wrap;
-	flex-grow: 1;
-
-	height: fit-content;
-	border-radius: 8px;
-   justify-content: center;
-   width: 100%;
-	padding: 16px;
-}
-
-.post-details {
-	align-items: center;
-   --gap: 0.5rem;
-}
-
-
-.line-trim{
-	margin: 0;
-}
-
-.avatar {
-	border-radius: 50%;
-	object-fit: cover;
-	object-position: center;
-	transition: .5s ease;
-	width: 40px;
-	aspect-ratio: 1;
-}
-
-.post-lead {
-	margin-bottom: 1rem;
-	margin-top: 0;
-}
-
-footer {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-footer.social-bar {
-	margin: 20px auto !important;
 }

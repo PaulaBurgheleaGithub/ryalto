@@ -57,17 +57,12 @@
 
 
 	<!-- STYLESHEETS -->
-	<link rel="stylesheet" type="text/css" href="./css/layout.css" />
-	<link rel="stylesheet" type="text/css" media="(min-width: 960px)" href="./css/wide.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="./css/layout.css" /> -->
+	<link rel="stylesheet" type="text/css" href="./css/wide.css" />
+	<link rel="stylesheet" type="text/css" media="(max-width: 37em)" href="./css/layout.css" />
 
 	<link rel="stylesheet" type="text/css" href="./css/theme.css" />
 	<link rel="stylesheet" type="text/css" href="./css/animation.css" />
-
-	<!-- Fonts -->
-	<style media="all" id="fa-v4-font-face" src="./assets/fonts/fa-v4-font-face.css"></style>
-	<style media="all" id="fa-v5-font-face" src="/assets/fonts/fa-v5-font-face.css"></style>
-	<style media="all" id="fa-v4-shims" src="/assets/fonts/fa-v4-shims.css"></style>
-	<style media="all" id="fa-main" src="/assets/fonts/fa-main.css"></style>
 
 	<!-- JS -->
 	<script src="nav.js" defer></script>
@@ -77,7 +72,7 @@
 <body>
 	<header>
 		<nav>
-			<div class="wrapper flex navbar">
+			<div class="flex navbar">
 				<a href="#">
 					<figure class="logo-content flex">
 						<img class="logo" src="./assets/img/ryalto-logo-lg.png" alt="Ryalto logo image">
@@ -86,7 +81,10 @@
 						</figcaption>
 					</figure>
 				</a>
-				<ul class="flex">
+				<button class="mobile-nav-toggle" aria-controls="menu" aria-expanded="false">
+					<span class="sr-only">Menu</span>
+				</button>
+				<ul id="menu" data-visible="false" class="menu flex">
 					<li>
 						<a class="nav-link" href="#">blog</a>
 					</li>
@@ -98,18 +96,15 @@
 					</li>
 					<li>
 						<span id="toggle-icon" class="toggle-icon">
-							<p>Toggle icon</p>
-						</span>
+							<p class="sr-only" aria-hidden="true">Toggle icon</p>
 					</li>
 				</ul>
 			</div>
-
 		</nav>
-
 	</header>
 	<main>
 		<section>
-			<header class="chevron-header wrapper">
+			<header class="chevron-header">
 				<div class="content">
 					<h1>Welcome to our Developer Page!</h1>
 					<p>We're really proud of our Tech Team here at Ryalto. This is a page for us to share what we're getting
@@ -117,184 +112,166 @@
 						to in the background! Gary, please can you think of some better words to put here!
 					</p>
 				</div>
-				<ul class="social-bar flex">
-					<li>
-						<a class="icon flex" href="https://github.com/ryalto">
-							<img src="./assets/svg/github-mark.svg" alt="github logo">
-						</a>
-					</li>
-					<li>
-						<a class="icon flex" href="https://twitter.com/ryalto">
-							<img src="./assets/svg/twitter.svg" alt="twitter or x logo">
-						</a>
-					</li>
-					<li>
-						<a class="icon flex" href="https://www.linkedin.com/company/ryalto">
-							<img src="./assets/svg/linkedin.svg" alt="linkedIn logo">
-						</a>
-					</li>
-					<li>
-						<a class="icon flex" href="">
-							<img src="./assets/svg/internet.svg" alt="internet logo">
-						</a>
-					</li>
-				</ul>
 			</header>
 		</section>
-		<section class="blog ">
+		<section class="blog">
 			<header class="blog-header">
-				<h2>developer blog</h2>
+				<h2 class="page-title">Developer Blog</h2>
 				<div class="tabcontent flex">
 					<h3>
 						See our team's latest blog posts below!</h3>
 					<p class="post-count sub">8 posts</p>
 				</div>
 			</header>
-			<!-- To do: check if I can add a main in a section -->
-			<main>
-				<ul class="post-container">
-					<li class="article-card">
+			<!-- To do: check if I can add a main in a section element -->
+			<section>
+				<div class="post-container">
+					<!-- I don't love the use of a tags here-->
+					<article class="article-card" post-lead="true">
 						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html">
-							<article class="card-content flex">
-								<h3 class="line-trim">Migrating to GitHub Actions for Rails CI</h3>
-								<p class="post-lead">
-									RubyCI is tragically shutting down, so I'm migrating to GitHub Actions for Rails CI
-								</p>
-								<figure class="post-details flex">
-									<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
-									<figcaption>
-										<h5>Phil</h5>
-										<p class="sub">October 13, 2022</p>
-									</figcaption>
-								</figure>
-							</article>
+							<h3 class="line-trim">Migrating to GitHub Actions for Rails CI</h3>
 						</a>
-					</li>
-					<li class="article-card">
+						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html" class="post-lead">
+							<p class="post-lead">
+								RubyCI is tragically shutting down, so I'm migrating to GitHub Actions for Rails CI
+							</p>
+						</a>
+						<figure class="post-details flex">
+							<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
+							<figcaption>
+								<h5>Phil</h5>
+								<p class="sub">October 13, 2022</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="article-card" post-lead="true">
 						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html">
-							<article class="card-content flex">
-								<h3 class="line-trim">Our Engineering Principles</h3>
-								<p class="post-lead">The principles that we follow as we build high quality software at Ryalto.
-								</p>
-								<figure class="post-details flex">
-									<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
-									<figcaption>
-										<h5>Phil</h5>
-										<p class="sub">September 8, 2022</p>
-									</figcaption>
-								</figure>
-							</article>
+							<h3 class="line-trim">Our Engineering Principles</h3>
 						</a>
-					</li>
-					<li class="article-card">
+						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html" class="post-lead">
+							<p class="post-lead">
+								The principles that we follow as we build high quality software at Ryalto.
+							</p>
+						</a>
+						<figure class="post-details flex">
+							<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
+							<figcaption>
+								<h5>Phil</h5>
+								<p class="sub">September 8, 2022</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="article-card" post-lead="true">
 						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html">
-							<article class="card-content flex">
-								<h3 class="line-trim">Migrating to GitHub Actions for Rails CI</h3>
-								<p class="post-lead">
-									RubyCI is tragically shutting down, so I'm migrating to GitHub Actions for Rails CI
-								</p>
-								<figure class="post-details flex">
-									<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
-									<figcaption>
-										<h5>Phil</h5>
-										<p class="sub">August 18, 2022</p>
-									</figcaption>
-								</figure>
-							</article>
+							<h3 class="line-trim">Migrating to GitHub Actions for Rails CI</h3>
 						</a>
-					</li>
-					<li class="article-card">
+						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html" class="post-lead">
+							<p class="post-lead">
+								RubyCI is tragically shutting down, so I'm migrating to GitHub Actions for Rails CI
+							</p>
+						</a>
+						<figure class="post-details flex">
+							<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
+							<figcaption>
+								<h5>Phil</h5>
+								<p class="sub">August 18, 2022</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="article-card" post-lead="true">
 						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html">
-							<article class="card-content flex">
-								<h3 class="line-trim">Hotwire Handbook Part 2</h3>
-								<p class="post-lead">
-									Part Two of the Hotwire Handbook. A detailed dive into pagination with Hotwire. An extension
-									to the excellent guide
-									by David Colby.
-								</p>
-								<figure class="post-details flex">
-									<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
-									<figcaption>
-										<h5>Phil</h5>
-										<p class="sub">June 27, 2022</p>
-									</figcaption>
-								</figure>
-							</article>
+							<h3 class="line-trim">Hotwire Handbook Part 2</h3>
 						</a>
-					</li>
-					<li class="article-card">
+						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html" class="post-lead">
+							<p class="post-lead">
+								Part Two of the Hotwire Handbook. A detailed dive into pagination with Hotwire. An extension
+								to the excellent guide
+								by David Colby.
+							</p>
+						</a>
+						<figure class="post-details flex">
+							<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
+							<figcaption>
+								<h5>Phil</h5>
+								<p class="sub">June 27, 2022</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="article-card" post-lead="true">
 						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html">
-							<article class="card-content flex">
-								<h3 class="line-trim">Migrating to GitHub Actions for Rails CI</h3>
-								<p class="post-lead">
-									RubyCI is tragically shutting down, so I'm migrating to GitHub Actions for Rails CI
-								</p>
-								<figure class="post-details flex">
-									<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
-									<figcaption>
-										<h5>Phil</h5>
-										<p class="sub">June 25, 2022</p>
-									</figcaption>
-								</figure>
-							</article>
+							<h3 class="line-trim">Migrating to GitHub Actions for Rails CI</h3>
 						</a>
-					</li>
-					<li class="article-card">
+						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html" class="post-lead">
+							<p class="post-lead">
+								RubyCI is tragically shutting down, so I'm migrating to GitHub Actions for Rails CI
+							</p>
+						</a>
+						<figure class="post-details flex">
+							<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
+							<figcaption>
+								<h5>Phil</h5>
+								<p class="sub">June 25, 2022</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="article-card" post-lead="true">
 						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html">
-							<article class="card-content flex">
-								<h3 class="line-trim">Migrating to GitHub Actions for Rails CI</h3>
-								<p class="post-lead">
-									RubyCI is tragically shutting down, so I'm migrating to GitHub Actions for Rails CI
-								</p>
-								<figure class="post-details flex">
-									<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
-									<figcaption>
-										<h5>Phil</h5>
-										<p class="sub">June 14, 2022</p>
-									</figcaption>
-								</figure>
-							</article>
+							<h3 class="line-trim">Admin Authorisation at Ryalto</h3>
 						</a>
-					</li>
-					<li class="article-card">
+						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html" class="post-lead">
+							<p class="post-lead">
+								We're working on a better way to manage the relationship between users and organisations.
+								This post it about our
+								simple approach to admin users.
+							</p>
+						</a>
+						<figure class="post-details flex">
+							<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
+							<figcaption>
+								<h5>Phil</h5>
+								<p class="sub">June 14, 2022</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="article-card" post-lead="true">
 						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html">
-							<article class="card-content flex">
-								<h3 class="line-trim">Hotwire Handbook Part 1</h3>
-								<p class="post-lead">
-									A guide that covers a range of Hotwire use cases with examples. This part covers Toggle
-									Buttons, Content Updates and
-									Live Counters.
-								</p>
-								<figure class="post-details flex">
-									<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
-									<figcaption>
-										<h5>Phil</h5>
-										<p class="sub">May 22, 2022</p>
-									</figcaption>
-								</figure>
-							</article>
+							<h3 class="line-trim">Hotwire Handbook Part 1</h3>
 						</a>
-					</li>
-					<li class="article-card">
+						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html" class="post-lead">
+							<p class="post-lead">
+								A guide that covers a range of Hotwire use cases with examples. This part covers Toggle
+								Buttons, Content Updates and
+								Live Counters.
+							</p>
+						</a>
+						<figure class="post-details flex">
+							<img class="avatar" id="phil" src="./assets/svg/phil.svg" alt="Phil's avatar picture">
+							<figcaption>
+								<h5>Phil</h5>
+								<p class="sub">May 22, 2022</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="article-card" post-lead="true">
 						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html">
-							<article class="card-content flex">
-								<h3 class="line-trim">Simple Javascript Theme Toggle</h3>
-								<p class="post-lead">
-									Dark mode is becoming more and more common, its something that most operating systems now
-									have as an option...
-								</p>
-								<figure class="post-details flex">
-									<img class="avatar" id="koto" src="./assets/svg/koto.svg" alt="Koto's avatar picture">
-									<figcaption>
-										<h5>Phil</h5>
-										<p class="sub">May 20, 2021</p>
-									</figcaption>
-								</figure>
-							</article>
+							<h3 class="line-trim">Simple Javascript Theme Toggle</h3>
 						</a>
-					</li>
-				</ul>
-			</main>
+						<a href="https://developer.ryalto.group/blog/2022/rails-github-actions.html" class="post-lead">
+							<p class="post-lead">
+								Dark mode is becoming more and more common, its something that most operating systems now
+								have as an option...
+							</p>
+						</a>
+						<figure class="post-details flex">
+							<img class="avatar" id="koto" src="./assets/svg/koto.svg" alt="Koto's avatar picture">
+							<figcaption>
+								<h5>Koto</h5>
+								<p class="sub">May 20, 2021</p>
+							</figcaption>
+						</figure>
+					</article>
+				</div>
+			</section>
 		</section>
 	</main>
 	<footer class="wrapper">
