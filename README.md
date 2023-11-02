@@ -3,14 +3,14 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/PaulaBurgheleaGithub/ryalto">
-    <img src="https://github.com/PaulaBurgheleaGithub/ryalto/blob/main/assets/figma/Ryalto%20-%20Android%20Large.pdf" alt="Logo" width="50" height="50">
+    <img src="https://github.com/PaulaBurgheleaGithub/ryalto/blob/assets/img/ryalto-logo-lg.png" alt="Logo" width="50" height="50">
   </a>
 
 <h3 align="center">Ryalto Developer Page</h3>
 
-	<p align="center">
-		Ryalto Developer Page, the responsive web page I have buit as part of the Front End Role application at Ryalto.
-	</p>
+<p align="center">
+	Ryalto Developer Page, the responsive web page I have buit as part of the Front End Role application at Ryalto.
+</p>
 </div>
 
 ## Ryalto Developer Blog Page Project
@@ -19,6 +19,7 @@ This was one of the design callanges they have asked us to complete. I have chos
 I have decised to play/expore using CSS subgird for this project. It is not fully suported on all browsers but I am sure that will change in the future.
 I also came across @contained querry selectors during my research and I've used it for my project. This aggain is not fully supported but I hade way to much fun playing with it and nesting CSS.
 
+[![Ryalto][page-screenshot]][page-screenshot]
 
 ### Technologies Used
 
@@ -51,6 +52,8 @@ Best browers to see the full functionality of the page is Firefox.
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/paula-burghelea/
+
+[page-screenshot](https://github.com/PaulaBurgheleaGithub/ryalto/blob/assets/img/RyaltoDeveloperPage.png)
 
 
 <!-- CONTACT -->
