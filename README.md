@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/PaulaBurgheleaGithub/ryalto">
-    <img src="https://github.com/PaulaBurgheleaGithub/ryalto/blob/assets/img/ryalto-logo-lg.png" alt="Logo" width="50" height="50">
+    <img src="https://github.com/PaulaBurgheleaGithub/ryalto/blob/main/assets/img/ryalto-logo-lg.png" alt="Logo" width="50" height="50">
   </a>
 
 <h3 align="center">Ryalto Developer Page</h3>
@@ -53,7 +53,7 @@ Best browers to see the full functionality of the page is Firefox.
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/paula-burghelea/
 
-[page-screenshot](https://github.com/PaulaBurgheleaGithub/ryalto/blob/assets/img/RyaltoDeveloperPage.png)
+[page-screenshot](https://github.com/PaulaBurgheleaGithub/ryalto/blob/main/assets/img/RyaltoDeveloperPage.png)
 
 
 <!-- CONTACT -->
